@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app",
     "dev": "nodemon app",
-    "test": "jest --watchAll=false"
+    "test": "jest --detectOpenHandles --watchAll=false"
   },
   "author": "",
   "license": "ISC",
