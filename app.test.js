@@ -3,7 +3,7 @@ const request = require('supertest');
 const app = require('./app')
 
 describe('Todos API', () => {
-  it('GET /  list of all to do activities', async () => {
+  test('GET /  list of all to do activities', async () => {
     const response = await request(app)
       .get('/')
       .expect('Content-Type', /json/)
@@ -16,6 +16,7 @@ describe('Todos API', () => {
       })
     ]));
   })
+
   it('GET /:id  list a specific to do activity', async () => {
     const response = await request(app)
       .get('/1')
