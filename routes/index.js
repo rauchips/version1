@@ -13,4 +13,9 @@ router.get('/', (req, res) => {
   res.json(todos)
 })
 
+router.get('/:id', (req, res) => {
+  const foundTodo = todos.find(todo => todo.id === Number(req.params.id))
+  res.json(foundTodo)
+})
+
 module.exports = router
