@@ -4,11 +4,11 @@ jobs:
   build:
     docker:
       - image: circleci/node:13.8.0
+		parallelism: 4
     steps:
       - checkout
       - run: npm install
       - run: npm test
-		parallelism: 4
 
 workflows:
   my_workflow:
