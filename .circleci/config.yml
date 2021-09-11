@@ -8,6 +8,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm test
+		parallelism: 4
 
 workflows:
   my_workflow:

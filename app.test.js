@@ -1,4 +1,3 @@
-const { it } = require('@jest/globals');
 const request = require('supertest');
 const app = require('./app')
 
@@ -17,7 +16,7 @@ describe('Todos API', () => {
     ]));
   })
 
-  it('GET /:id  list a specific to do activity', async () => {
+  test('GET /:id  list a specific to do activity', async () => {
     const response = await request(app)
       .get('/1')
       .expect('Content-Type', /json/)
